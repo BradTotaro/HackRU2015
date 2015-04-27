@@ -43,9 +43,35 @@
     <div class="container-fluid">
       <div class="row">
         <?php include "nav.php"; ?>
+        
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Camera</h1>
-			<div> COMING SPOON</div>
+			<div id="live" style="width:640px;height:480px;margin:0 auto;text-align:center"></div>
+<script>
+
+$f("live", "http://releases.flowplayer.org/swf/flowplayer-3.2.18.swf", {
+ 
+    clip: {
+        url: '',
+        live: true,
+        // configure clip to use influxis as our provider, it uses our rtmp plugin
+        provider: 'influxis'
+    },
+ 
+    // streaming plugins are configured under the plugins node
+    plugins: {
+ 
+        // here is our rtpm plugin configuration
+        influxis: {
+            url: "flowplayer.rtmp-3.2.13.swf",
+ 
+            // netConnectionUrl defines where the streams are found
+            netConnectionUrl: 'rtmp://fishbowl.yepps.net/live'
+        }
+    }
+});
+</script>
+
         </div>
       </div>
     </div>

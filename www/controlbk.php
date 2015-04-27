@@ -42,10 +42,19 @@
 
     <div class="container-fluid">
       <div class="row">
-        <?php include "nav.php"; ?>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Camera</h1>
-			<div> COMING SPOON</div>
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="/">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="/reports.php">Reports</a></li>
+            <li class="active"><a href="#">Control</a></li>
+            <li><a href="/view.php">Camera</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Control</h1>
+			<div style="text-align: center;"><a class="btn btn-primary btn-lg" href="http://fishbowl.yepps.net:8080/feed">Feed Fish Now!</a><br>
+			<a class="btn btn-default" href="#" role="button">Turn On Lights</a><br>
+			<a class="btn btn-default" href="#" role="button">Turn Off Filter</a></div>
         </div>
       </div>
     </div>
